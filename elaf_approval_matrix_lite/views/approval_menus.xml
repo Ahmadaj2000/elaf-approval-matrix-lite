@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_elaf_approval_root" name="Approvals" sequence="26"
+              web_icon="elaf_approval_matrix_lite,static/description/icon.png"
+              groups="group_approval_user"/>
+
+    <menuitem id="menu_elaf_approval_dashboard" name="Overview" parent="menu_elaf_approval_root"
+              action="elaf_approval_dashboard_action" sequence="1"/>
+    <menuitem id="menu_elaf_approval_mine" name="My Approvals" parent="menu_elaf_approval_root"
+              action="elaf_approval_request_action_mine" sequence="10"/>
+    <menuitem id="menu_elaf_approval_requests" name="All Requests" parent="menu_elaf_approval_root"
+              action="elaf_approval_request_action_all" sequence="20"/>
+    <menuitem id="menu_elaf_approval_log" name="Audit Log" parent="menu_elaf_approval_root"
+              action="elaf_approval_log_action" sequence="30"/>
+
+    <menuitem id="menu_elaf_approval_config" name="Configuration" parent="menu_elaf_approval_root"
+              sequence="90" groups="group_approval_manager"/>
+    <menuitem id="menu_elaf_approval_rules" name="Approval Rules" parent="menu_elaf_approval_config"
+              action="elaf_approval_rule_action" sequence="10"/>
+    <menuitem id="menu_elaf_approval_usage_log" name="Usage Log" parent="menu_elaf_approval_config"
+              action="elaf_approval_usage_log_action" sequence="80"/>
+
+    <menuitem id="menu_elaf_approval_comparison" name="Lite vs Pro" parent="menu_elaf_approval_root"
+              action="elaf_approval_comparison_action" sequence="95"/>
+
+    <!-- Shortcut from Purchase configuration -->
+    <menuitem id="menu_elaf_approval_rules_purchase" name="Approval Rules"
+              parent="purchase.menu_purchase_config" action="elaf_approval_rule_action" sequence="50"
+              groups="group_approval_manager"/>
+</odoo>

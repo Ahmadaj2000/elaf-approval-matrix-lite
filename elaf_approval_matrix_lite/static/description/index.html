@@ -1,0 +1,363 @@
+<section class="container" style="font-family:-apple-system, &#39;Segoe UI&#39;, Roboto, &#39;Helvetica Neue&#39;, Arial, sans-serif; color:#1F2933; font-size:16px">
+
+  
+  <div class="row">
+    <div class="col-12 text-center">
+      <img src="banner.png" alt="Approval Matrix Lite banner" class="img-fluid rounded border mb-4">
+      <h1 class="mb-2" style="color:#1F2933; font-size:32px; font-weight:700">Approval Matrix Lite</h1>
+      <p class="mb-2" style="color:#3b5bdb; font-size:14px; font-weight:600">LITE EDITION</p>
+      <p class="lead mb-3" style="color:#52606D">Amount-based approval rules for Purchase Orders, enforced on the server, with material-change invalidation and an audit log that cannot be edited.</p>
+      <span class="badge border m-1 p-2" style="color:#1F2933; font-size:13px; font-weight:500; border-color:#3b5bdb">Server-side enforcement</span>
+      <span class="badge border m-1 p-2" style="color:#1F2933; font-size:13px; font-weight:500; border-color:#3b5bdb">Material-change invalidation</span>
+      <span class="badge border m-1 p-2" style="color:#1F2933; font-size:13px; font-weight:500; border-color:#3b5bdb">Audit log</span>
+      <span class="badge border m-1 p-2" style="color:#1F2933; font-size:13px; font-weight:500; border-color:#3b5bdb">English and Arabic</span>
+    </div>
+  </div>
+
+  
+  <div class="row mt-5">
+    <div class="col-md-4 mb-3">
+      <div class="p-3 h-100" style="border-top:4px solid #3b5bdb">
+        <p class="mb-1" style="color:#3b5bdb; font-size:28px; font-weight:700">1</p>
+        <h3 class="mb-2" style="color:#1F2933; font-size:18px; font-weight:600">Rules by amount</h3>
+        <p class="mb-0" style="color:#52606D">Approval rules select the approvers from the Purchase Order total, converted to the company currency.</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="p-3 h-100" style="border-top:4px solid #3b5bdb">
+        <p class="mb-1" style="color:#3b5bdb; font-size:28px; font-weight:700">2</p>
+        <h3 class="mb-2" style="color:#1F2933; font-size:18px; font-weight:600">Enforced on confirmation</h3>
+        <p class="mb-0" style="color:#52606D">A Purchase Order that falls under a rule cannot be confirmed until its approval request is approved and still matches the order.</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="p-3 h-100" style="border-top:4px solid #3b5bdb">
+        <p class="mb-1" style="color:#3b5bdb; font-size:28px; font-weight:700">3</p>
+        <h3 class="mb-2" style="color:#1F2933; font-size:18px; font-weight:600">Changes are caught</h3>
+        <p class="mb-0" style="color:#52606D">If the vendor, currency, lines, amount, delivery address or payment terms change before confirmation, the approval is invalidated and a new one is required. Once the order is confirmed, such changes are refused.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="row mt-4">
+    <div class="col-12 text-center">
+      <img src="screenshots/AML-S01.png" alt="Approvals Overview: requests waiting for me, pending total, approved and rejected counts and average approval time" class="img-fluid rounded border">
+      <p class="mt-2" style="color:#52606D; font-size:13px">Approvals Overview: requests waiting for me, pending total, approved and rejected counts and average approval time</p>
+    </div>
+  </div>
+
+  
+
+  
+  <h2 id="problems" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">The problem</h2>
+  <ul>
+    <li class="mb-2">Large purchases are confirmed without the right sign-off.</li>
+    <li class="mb-2">An approved order is edited afterwards and the approval silently no longer matches what is bought.</li>
+    <li class="mb-2">Nobody can show later who approved what, when, and at which amount.</li>
+  </ul>
+
+  
+  <h2 id="features" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Key features</h2>
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="border rounded p-3 h-100">
+        <h3 class="mb-2" style="color:#1F2933; font-size:17px; font-weight:600">Approval rules for Purchase Orders</h3>
+        <p class="mb-0" style="color:#52606D; font-size:15px">Amount band (minimum and maximum, company currency) per company. Each level uses specific users or a security group. Amount tolerance per rule (default 0%).</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="border rounded p-3 h-100">
+        <h3 class="mb-2" style="color:#1F2933; font-size:17px; font-weight:600">Request, approve, reject</h3>
+        <p class="mb-0" style="color:#52606D; font-size:15px">Request Approval from the Purchase Order. Approvers act from the order or from My Approvals. A reason is required to reject. Approvers get a to-do activity.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="border rounded p-3 h-100">
+        <h3 class="mb-2" style="color:#1F2933; font-size:17px; font-weight:600">Server-side enforcement</h3>
+        <p class="mb-0" style="color:#52606D; font-size:15px">Confirming an order under a rule (button, write of the state, creation in a confirmed state, or an RPC call of these) is refused unless the request is approved and the order still matches it. The check runs on the order&#39;s values after the call, so fields changed in the same call are included.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="border rounded p-3 h-100">
+        <h3 class="mb-2" style="color:#1F2933; font-size:17px; font-weight:600">Material-change invalidation</h3>
+        <p class="mb-0" style="color:#52606D; font-size:15px">A fingerprint of vendor, currency, company, lines, delivery address and payment terms is stored. Changes of these, or an amount increase beyond the tolerance, invalidate the approval. On a confirmed order the same changes are refused (cancel, reset to RFQ and request a new approval); receipts, vendor bills and lock/unlock are not affected.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="border rounded p-3 h-100">
+        <h3 class="mb-2" style="color:#1F2933; font-size:17px; font-weight:600">Audit log</h3>
+        <p class="mb-0" style="color:#52606D; font-size:15px">Every request, decision, invalidation and cancellation is logged with user, time, level, amount and comment. Log entries cannot be edited or deleted.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="border rounded p-3 h-100">
+        <h3 class="mb-2" style="color:#1F2933; font-size:17px; font-weight:600">Approvals Overview</h3>
+        <p class="mb-0" style="color:#52606D; font-size:15px">Waiting for me, pending requests and amount, approved, rejected, average approval time and invalidations for 7, 30, 90 or 365 days, each opening the requests behind it.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3">
+      <div class="border rounded p-3 h-100">
+        <h3 class="mb-2" style="color:#1F2933; font-size:17px; font-weight:600">Basic segregation of duties</h3>
+        <p class="mb-0" style="color:#52606D; font-size:15px">A requester can never approve or reject their own request. Approvers must be active internal users with access to the order&#39;s company.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <h2 id="lite-limits" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Lite edition limits</h2>
+  <div class="p-3 mb-3" style="border-left:4px solid #3b5bdb">
+    <p class="mb-2">This free edition is fully functional within the limits below. Please review them before installing.</p>
+    <ul class="mb-0">
+      <li class="mb-1">One company per database (the first company that uses the app)</li>
+      <li class="mb-1">Purchase Orders only</li>
+      <li class="mb-1">One active approval rule</li>
+      <li class="mb-1">Up to 2 levels per rule, one approval per level, sequential</li>
+      <li class="mb-1">Up to 20 approval requests in total (counted when a request is submitted; resubmitting after invalidation counts as a new request; deleting requests does not give them back)</li>
+      <li class="mb-1">Approval enforcement stays on: new Purchase Orders that need approval cannot be confirmed. Pending requests can still be approved or rejected and approved orders can still be confirmed. A manager may archive the rule to stop requiring approvals.</li>
+    </ul>
+  </div>
+
+  
+  <h2 id="screenshots" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Screenshots</h2>
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <img src="screenshots/AML-S02.png" alt="Approval rule with an amount band and two sequential levels" class="img-fluid rounded border">
+      <p class="mt-2" style="color:#52606D; font-size:13px">Approval rule with an amount band and two sequential levels</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <img src="screenshots/AML-S03.png" alt="Request Approval on a Purchase Order, with the approval status banner" class="img-fluid rounded border">
+      <p class="mt-2" style="color:#52606D; font-size:13px">Request Approval on a Purchase Order, with the approval status banner</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <img src="screenshots/AML-S04.png" alt="Confirmation is refused on the server while approval is missing" class="img-fluid rounded border">
+      <p class="mt-2" style="color:#52606D; font-size:13px">Confirmation is refused on the server while approval is missing</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <img src="screenshots/AML-S05.png" alt="A change after approval invalidates the request" class="img-fluid rounded border">
+      <p class="mt-2" style="color:#52606D; font-size:13px">A change after approval invalidates the request</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <img src="screenshots/AML-S06.png" alt="My Approvals: requests waiting for my decision" class="img-fluid rounded border">
+      <p class="mt-2" style="color:#52606D; font-size:13px">My Approvals: requests waiting for my decision</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <img src="screenshots/AML-S07.png" alt="Audit log of every request, approval, rejection and invalidation" class="img-fluid rounded border">
+      <p class="mt-2" style="color:#52606D; font-size:13px">Audit log of every request, approval, rejection and invalidation</p>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <img src="screenshots/AML-S08.png" alt="Lite vs Pro page with the Lite usage counter" class="img-fluid rounded border">
+      <p class="mt-2" style="color:#52606D; font-size:13px">Lite vs Pro page with the Lite usage counter</p>
+    </div>
+  </div>
+
+  
+  <h2 id="use-cases" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Use cases</h2>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <div class="p-3" style="border-left:4px solid #3b5bdb">
+        <h3 class="mb-1" style="color:#1F2933; font-size:17px; font-weight:600">Purchasing sign-off</h3>
+        <p class="mb-0" style="color:#52606D">Orders above a threshold need the purchasing manager, larger ones also the finance manager, in that order.</p>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <div class="p-3" style="border-left:4px solid #3b5bdb">
+        <h3 class="mb-1" style="color:#1F2933; font-size:17px; font-weight:600">Audit evidence</h3>
+        <p class="mb-0" style="color:#52606D">Internal audit reviews the log of who approved each order, at which amount, and which approvals were invalidated by later changes.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <h2 id="how-it-works" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">How it works</h2>
+  <ol>
+    <li class="mb-2">A manager creates one approval rule with an amount band and up to two levels.</li>
+    <li class="mb-2">The buyer clicks Request Approval on the Purchase Order. Approvers of the first level get an activity.</li>
+    <li class="mb-2">Each level approves in turn. When the last level approves, the order can be confirmed.</li>
+    <li class="mb-2">If the order changes materially before confirmation, the request is invalidated and approval is requested again. After confirmation, material changes are refused until the order is cancelled, reset to RFQ and approved again.</li>
+  </ol>
+
+  
+  <h2 id="security" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Security and privacy</h2>
+  <ul>
+    <li class="mb-2">Two security groups: Approval Matrix: User (request approvals, see own requests and requests to approve) and Approval Matrix: Manager (configure rules, see all requests of the allowed companies).</li>
+    <li class="mb-2">Approval requests and the audit log are read-only for users; only the application&#39;s own actions change them.</li>
+    <li class="mb-2">Multi-company record rules on rules, requests and the audit log.</li>
+    <li class="mb-2">All data stays in your Odoo database. The module makes no external network calls. Notifications and activities use Odoo&#39;s standard messaging and your own outgoing mail server, if one is configured.</li>
+  </ul>
+
+  
+  <h2 id="editions" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Lite and Pro editions</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered table-sm">
+      <thead>
+        <tr>
+          <th scope="col">Capability</th>
+          <th scope="col" class="text-center">Lite (free)</th>
+          <th scope="col" class="text-center">Pro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Purchase Order approval rules and server-side enforcement</td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Material-change invalidation, frozen confirmed orders and audit log</td>
+          <td class="text-center">&#10003;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Rule conditions (partner, product category, analytic account, sales team, responsible user, domain)</td>
+          <td class="text-center">&#8212;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Delegation of authority (one hop)</td>
+          <td class="text-center">&#8212;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Segregation of duties rules and conflict list</td>
+          <td class="text-center">&#8212;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Policy simulation</td>
+          <td class="text-center">&#8212;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Transaction-splitting detection</td>
+          <td class="text-center">&#8212;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>SLA per level with escalation</td>
+          <td class="text-center">&#8212;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Governance Control Tower dashboard</td>
+          <td class="text-center">&#8212;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Visual drag-and-drop workflow builder on rules</td>
+          <td class="text-center">&#8212;</td>
+          <td class="text-center">&#10003;</td>
+        </tr>
+        <tr>
+          <td>Companies</td>
+          <td class="text-center">One company per database (the first company that uses the app)</td>
+          <td class="text-center">Multi-company</td>
+        </tr>
+        <tr>
+          <td>Document types</td>
+          <td class="text-center">Purchase Orders only</td>
+          <td class="text-center">Purchase Orders, Sales Orders, Vendor Bills, Customer Invoices and Customer Credit Notes</td>
+        </tr>
+        <tr>
+          <td>Active approval rules</td>
+          <td class="text-center">One active approval rule</td>
+          <td class="text-center">No cap</td>
+        </tr>
+        <tr>
+          <td>Levels per rule</td>
+          <td class="text-center">Up to 2 levels per rule, one approval per level, sequential</td>
+          <td class="text-center">No cap; sequential or parallel; any one, any N or all approvers</td>
+        </tr>
+        <tr>
+          <td>Approval requests</td>
+          <td class="text-center">Up to 20 approval requests in total (counted when a request is submitted; resubmitting after invalidation counts as a new request; deleting requests does not give them back)</td>
+          <td class="text-center">No cap</td>
+        </tr>
+        <tr>
+          <td>After the 20 requests are used</td>
+          <td class="text-center">Approval enforcement stays on: new Purchase Orders that need approval cannot be confirmed. Pending requests can still be approved or rejected and approved orders can still be confirmed. A manager may archive the rule to stop requiring approvals.</td>
+          <td class="text-center">Not applicable</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="color:#52606D; font-size:14px">A Pro edition is available. It is installed on top of Lite and keeps all Lite data, settings and history.</p>
+
+  
+  <h2 id="installation" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Installation</h2>
+  <ol>
+    <li class="mb-2">Install the module from the Odoo Apps menu (or copy it into your addons path and update the apps list).</li>
+    <li class="mb-2">Assign the user and manager groups under Settings &gt; Users.</li>
+    <li class="mb-2">Open the application menu and follow the configuration steps below.</li>
+  </ol>
+
+  
+  <h2 id="compatibility" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Compatibility</h2>
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <tbody>
+        <tr><th scope="row">Supported Odoo versions</th><td>18.0</td></tr>
+        <tr><th scope="row">Other Odoo versions</th><td>Odoo 17.0 and 19.0 are distributed as separate packages.</td></tr>
+        <tr><th scope="row">Community / Enterprise</th><td>Odoo 18.0 Community Edition (tested). Enterprise Edition has not been tested.</td></tr>
+        <tr><th scope="row">Hosting</th><td>On-premise and Odoo.sh. Not available on Odoo Online, which does not run third-party Python modules.</td></tr>
+        <tr><th scope="row">Dependencies</th><td>Purchase, Discuss</td></tr>
+        <tr><th scope="row">License</th><td>LGPL-3</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  <h2 id="configuration" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Configuration</h2>
+  <ul>
+    <li class="mb-2">Give users the Approval Matrix: User group and rule owners the Approval Matrix: Manager group (Settings &gt; Users).</li>
+    <li class="mb-2">Create the approval rule under Approvals &gt; Configuration &gt; Approval Rules (also under Purchase &gt; Configuration).</li>
+    <li class="mb-2">Set the amount band, the amount tolerance and the levels with their approvers.</li>
+  </ul>
+
+  
+  <h2 id="faq" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Frequently asked questions</h2>
+  <h4 class="mt-3 mb-1" style="color:#1F2933; font-size:17px; font-weight:600">Can a requester approve their own request?</h4>
+  <p style="color:#52606D">No. The requester is removed from the approvers and an explicit error is raised if they try.</p>
+  <h4 class="mt-3 mb-1" style="color:#1F2933; font-size:17px; font-weight:600">What happens when the 20 Lite requests are used?</h4>
+  <p style="color:#52606D">Enforcement stays on. Existing requests can still be decided and approved orders confirmed. New orders under the rule cannot be confirmed; a manager may archive the rule, or install the Pro edition.</p>
+  <h4 class="mt-3 mb-1" style="color:#1F2933; font-size:17px; font-weight:600">Is the Lite counter a licence check?</h4>
+  <p style="color:#52606D">No. It is a local record in your database. There is no activation key and no remote check.</p>
+  <h4 class="mt-3 mb-1" style="color:#1F2933; font-size:17px; font-weight:600">Can an administrator bypass approval?</h4>
+  <p style="color:#52606D">Confirmation through Odoo&#39;s normal methods is checked for every user, including code running as superuser. Direct SQL is not checked, and administrators can archive rules; see the Documentation tab.</p>
+
+  
+  <h2 id="documentation" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Documentation</h2>
+  <p>The user and administrator guide is available in the Documentation tab of this listing.</p>
+
+  
+  <h2 id="support" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Support</h2>
+  <p>Community support, best effort. Contact: <a href="mailto:info@elaf-development.com">info@elaf-development.com</a></p>
+
+  
+  <h2 id="limitations" class="mt-5 mb-3" style="color:#1F2933; font-size:24px; font-weight:600; border-bottom:3px solid #3b5bdb; padding-bottom:8px">Known limitations</h2>
+  <ul>
+    <li class="mb-2">Enforcement works at the Odoo ORM level. Direct SQL changes and database restores are not controlled.</li>
+    <li class="mb-2">Administrators can archive a rule or delete its levels; that is a deliberate policy change, not a bypass.</li>
+    <li class="mb-2">Orders that match no active rule need no approval.</li>
+    <li class="mb-2">Only Purchase Orders are covered in Lite.</li>
+    <li class="mb-2">Not available on Odoo Online (third-party Python modules are not supported there).</li>
+  </ul>
+
+  
+  <div class="mt-5 pt-3 border-top text-center" style="color:#52606D; font-size:13px">
+    <p class="mb-1">Approval Matrix Lite 18.0.1.1.0, released 2026-11-22</p>
+    <p class="mb-1">Initial release for Odoo 18.0.</p>
+  </div>
+</section>

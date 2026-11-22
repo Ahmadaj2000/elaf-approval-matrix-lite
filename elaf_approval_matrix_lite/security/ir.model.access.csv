@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_rule_internal,elaf.approval.rule internal,model_elaf_approval_rule,base.group_user,1,0,0,0
+access_rule_manager,elaf.approval.rule manager,model_elaf_approval_rule,group_approval_manager,1,1,1,1
+access_rule_level_internal,elaf.approval.rule.level internal,model_elaf_approval_rule_level,base.group_user,1,0,0,0
+access_rule_level_manager,elaf.approval.rule.level manager,model_elaf_approval_rule_level,group_approval_manager,1,1,1,1
+access_request_internal,elaf.approval.request internal,model_elaf_approval_request,base.group_user,1,0,0,0
+access_request_level_internal,elaf.approval.request.level internal,model_elaf_approval_request_level,base.group_user,1,0,0,0
+access_log_internal,elaf.approval.log internal,model_elaf_approval_log,base.group_user,1,0,0,0
+access_usage_user,elaf.approval.usage user,model_elaf_approval_usage,group_approval_user,1,0,0,0
+access_usage_log_manager,elaf.approval.usage.log manager,model_elaf_approval_usage_log,group_approval_manager,1,0,0,0
+access_decision_wizard_internal,elaf.approval.decision.wizard internal,model_elaf_approval_decision_wizard,base.group_user,1,1,1,0
