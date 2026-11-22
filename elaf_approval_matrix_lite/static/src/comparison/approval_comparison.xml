@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="elaf_approval_matrix_lite.Comparison">
+        <div class="o_elaf_appr_dashboard o_action">
+            <div class="o_elaf_appr_header">
+                <div>
+                    <h1>
+                        Approval Matrix editions
+                        <t t-if="state.data">
+                            <span t-if="state.data.usage.is_pro" class="o_elaf_appr_badge">Pro Edition installed</span>
+                            <span t-else="" class="o_elaf_appr_badge lite">Lite Edition</span>
+                        </t>
+                    </h1>
+                    <p class="o_elaf_appr_subtitle">What each edition includes, and what Approval Matrix has done for you so far.</p>
+                </div>
+                <div class="o_elaf_appr_filters">
+                    <button class="btn btn-sm btn-secondary" t-on-click="openDashboard">Back to overview</button>
+                </div>
+            </div>
+
+            <div t-if="state.loading and !state.data" class="o_elaf_appr_state">
+                <i class="fa fa-circle-o-notch fa-spin fa-2x mb-2"/>
+                <div class="o_elaf_appr_state_title">Loading…</div>
+            </div>
+            <div t-elif="state.error" class="o_elaf_appr_state error">
+                <div class="o_elaf_appr_state_title">This page could not be loaded</div>
+                <p t-esc="state.error"/>
+                <button class="btn btn-secondary btn-sm" t-on-click="() => this.load()">Try again</button>
+            </div>
+            <t t-elif="state.data">
+                <t t-set="d" t-value="state.data"/>
+                <div class="o_elaf_appr_grid">
+                    <div class="o_elaf_appr_card">
+                        <h2>Value delivered so far (your real data)</h2>
+                        <div class="o_elaf_appr_value_grid">
+                            <div class="o_elaf_appr_value"><strong t-esc="d.value.pos_controlled"/><span>Purchase Orders controlled</span></div>
+                            <div class="o_elaf_appr_value"><strong t-esc="d.value.amount_approved"/><span>Total amount approved</span></div>
+                            <div class="o_elaf_appr_value"><strong t-esc="d.value.rejections"/><span>Rejections that stopped spend (<t t-esc="d.value.amount_rejected"/>)</span></div>
+                            <div class="o_elaf_appr_value"><strong t-esc="d.value.invalidations"/><span>Changes after approval caught</span></div>
+                        </div>
+                        <p class="mt-3 mb-0" t-if="!d.usage.is_pro">
+                            Extend this control to Sales Orders, Vendor Bills and Customer Invoices, with a visual workflow builder, delegation of authority and segregation-of-duties rules, with the Pro edition.
+                        </p>
+                    </div>
+                    <div class="o_elaf_appr_card" t-if="!d.usage.is_pro">
+                        <h2>Lite edition limits</h2>
+                        <ul class="mb-2">
+                            <li t-foreach="d.limits" t-as="limit" t-key="limit_index" t-esc="limit"/>
+                        </ul>
+                        <div t-if="d.usage.caps_enabled">
+                            <strong t-esc="d.usage.used"/> of <t t-esc="d.usage.limit"/> approval requests used
+                            <div t-attf-class="o_elaf_appr_progress {{ d.usage.tone }}" role="progressbar"
+                                 t-att-aria-valuenow="d.usage.pct" aria-valuemin="0" aria-valuemax="100">
+                                <div t-attf-style="width: {{ d.usage.pct }}%"/>
+                            </div>
+                        </div>
+                        <h2 class="mt-3">How upgrading works</h2>
+                        <p>Install the Pro module (Approval Matrix) on this database. All your rules, requests, audit history, settings and permissions are kept, and every Lite limit is removed.</p>
+                        <a class="btn btn-primary" t-att-href="d.pro_url" target="_blank" rel="noopener noreferrer">Discover Pro</a>
+                        <p class="text-muted small mt-2 mb-0">Questions: <a t-attf-href="mailto:{{ d.support_email }}" t-esc="d.support_email"/></p>
+                    </div>
+                    <div class="o_elaf_appr_card" t-else="">
+                        <h2>Pro edition installed</h2>
+                        <p>All limits are removed. Your Lite rules, requests and audit history were kept.</p>
+                        <p class="text-muted small mb-0">Support: <a t-attf-href="mailto:{{ d.support_email }}" t-esc="d.support_email"/></p>
+                    </div>
+                </div>
+                <div class="o_elaf_appr_card mt-3">
+                    <h2>Feature comparison</h2>
+                    <div class="o_elaf_appr_table_wrap">
+                        <table class="o_elaf_appr_table">
+                            <thead><tr><th>Capability</th><th>Lite</th><th>Pro</th></tr></thead>
+                            <tbody>
+                                <tr t-foreach="d.features" t-as="f" t-key="f_index">
+                                    <td>
+                                        <t t-esc="f.label"/>
+                                        <span t-if="f.lite === false and !d.usage.is_pro" class="o_elaf_appr_lock"><i class="fa fa-lock" aria-hidden="true"/> Pro</span>
+                                    </td>
+                                    <td>
+                                        <t t-if="isBool(f.lite)">
+                                            <span t-if="f.lite" class="o_elaf_appr_check" aria-label="Included">✓</span>
+                                            <span t-else="" class="o_elaf_appr_dash" aria-label="Not included">—</span>
+                                        </t>
+                                        <t t-else="" t-esc="f.lite"/>
+                                    </td>
+                                    <td>
+                                        <t t-if="isBool(f.pro)">
+                                            <span t-if="f.pro" class="o_elaf_appr_check" aria-label="Included">✓</span>
+                                            <span t-else="" class="o_elaf_appr_dash" aria-label="Not included">—</span>
+                                        </t>
+                                        <t t-else="" t-esc="f.pro"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

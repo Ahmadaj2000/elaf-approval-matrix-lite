@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_groups_privilege_elaf_approval" model="res.groups.privilege">
+        <field name="name">Approval Matrix</field>
+        <field name="sequence">30</field>
+        <field name="category_id" ref="base.module_category_supply_chain"/>
+    </record>
+
+    <record id="group_approval_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="sequence">10</field>
+        <field name="privilege_id" ref="res_groups_privilege_elaf_approval"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">Can request approvals and see own requests and requests to approve.</field>
+    </record>
+
+    <record id="group_approval_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="sequence">20</field>
+        <field name="privilege_id" ref="res_groups_privilege_elaf_approval"/>
+        <field name="implied_ids" eval="[(4, ref('group_approval_user'))]"/>
+        <field name="user_ids" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        <field name="comment">Configures approval rules and sees every request of the allowed companies.</field>
+    </record>
+
+    <!-- Multi-company (global rules: apply to everybody) -->
+    <record id="rule_approval_rule_company" model="ir.rule">
+        <field name="name">Approval rule: multi-company</field>
+        <field name="model_id" ref="model_elaf_approval_rule"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_approval_rule_level_company" model="ir.rule">
+        <field name="name">Approval rule level: multi-company</field>
+        <field name="model_id" ref="model_elaf_approval_rule_level"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_approval_request_company" model="ir.rule">
+        <field name="name">Approval request: multi-company</field>
+        <field name="model_id" ref="model_elaf_approval_request"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_approval_request_level_company" model="ir.rule">
+        <field name="name">Approval request level: multi-company</field>
+        <field name="model_id" ref="model_elaf_approval_request_level"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+    <record id="rule_approval_log_company" model="ir.rule">
+        <field name="name">Approval log: multi-company</field>
+        <field name="model_id" ref="model_elaf_approval_log"/>
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <!-- Internal users: own requests and requests they approve -->
+    <record id="rule_approval_request_user" model="ir.rule">
+        <field name="name">Approval request: requester or approver</field>
+        <field name="model_id" ref="model_elaf_approval_request"/>
+        <field name="domain_force">['|', ('requester_id', '=', user.id), ('all_approver_ids', 'in', [user.id])]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_approval_request_level_user" model="ir.rule">
+        <field name="name">Approval request level: requester or approver</field>
+        <field name="model_id" ref="model_elaf_approval_request_level"/>
+        <field name="domain_force">['|', ('request_id.requester_id', '=', user.id), ('request_id.all_approver_ids', 'in', [user.id])]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="rule_approval_log_user" model="ir.rule">
+        <field name="name">Approval log: requester or approver</field>
+        <field name="model_id" ref="model_elaf_approval_log"/>
+        <field name="domain_force">['|', ('request_id.requester_id', '=', user.id), ('request_id.all_approver_ids', 'in', [user.id])]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- Managers: everything within the allowed companies -->
+    <record id="rule_approval_request_manager" model="ir.rule">
+        <field name="name">Approval request: manager</field>
+        <field name="model_id" ref="model_elaf_approval_request"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('group_approval_manager'))]"/>
+    </record>
+    <record id="rule_approval_request_level_manager" model="ir.rule">
+        <field name="name">Approval request level: manager</field>
+        <field name="model_id" ref="model_elaf_approval_request_level"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('group_approval_manager'))]"/>
+    </record>
+    <record id="rule_approval_log_manager" model="ir.rule">
+        <field name="name">Approval log: manager</field>
+        <field name="model_id" ref="model_elaf_approval_log"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('group_approval_manager'))]"/>
+    </record>
+</odoo>

@@ -1,0 +1,146 @@
+// ELAF design kit v1 — vendor into each module and replace the prefix `o_elaf_appr_`
+// with `o_elaf_<prod>_` (e.g. o_elaf_appr_). Pure SCSS, no external fonts/libraries.
+// Works on Odoo 17/18/19 backends (Bootstrap 5 present). RTL-safe (logical props).
+
+$elaf-ink: #1f2933;
+$elaf-muted: #52606d;
+$elaf-line: #d9e2ec;
+$elaf-surface: #ffffff;
+$elaf-canvas: #f5f7fa;
+$elaf-ok: #2b8a3e;
+$elaf-warn: #e67700;
+$elaf-bad: #c92a2a;
+$elaf-info: #1971c2;
+// Product accent — set per product:
+// approval #3b5bdb · health #0ca678 · cashflow #1098ad · rebalance #f08c00
+$elaf-accent: #3b5bdb !default;
+
+.o_elaf_appr_dashboard {
+    background: $elaf-canvas;
+    color: $elaf-ink;
+    min-height: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 24px;
+    font-size: 14px;
+
+    .o_elaf_appr_header {
+        display: flex; flex-wrap: wrap; gap: 12px;
+        align-items: center; justify-content: space-between;
+        margin-block-end: 20px;
+        h1 { font-size: 22px; font-weight: 600; margin: 0; }
+        .o_elaf_appr_subtitle { color: $elaf-muted; margin: 2px 0 0; }
+        border-inline-start: 4px solid $elaf-accent;
+        padding-inline-start: 12px;
+    }
+    .o_elaf_appr_filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+
+    .o_elaf_appr_kpis {
+        display: grid; gap: 16px; margin-block-end: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .o_elaf_appr_kpi {
+        background: $elaf-surface; border: 1px solid $elaf-line; border-radius: 10px;
+        padding: 16px; cursor: pointer; transition: box-shadow .15s, transform .15s;
+        &:hover { box-shadow: 0 4px 14px rgba(31,41,51,.08); transform: translateY(-1px); }
+        .o_elaf_appr_kpi_label { color: $elaf-muted; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+        .o_elaf_appr_kpi_value { font-size: 26px; font-weight: 700; margin-top: 6px; line-height: 1.1; }
+        .o_elaf_appr_kpi_hint { color: $elaf-muted; font-size: 12px; margin-top: 4px; }
+        &.is-ok .o_elaf_appr_kpi_value { color: $elaf-ok; }
+        &.is-warn .o_elaf_appr_kpi_value { color: $elaf-warn; }
+        &.is-bad .o_elaf_appr_kpi_value { color: $elaf-bad; }
+    }
+
+    .o_elaf_appr_grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); }
+    .o_elaf_appr_card {
+        background: $elaf-surface; border: 1px solid $elaf-line; border-radius: 10px;
+        padding: 16px; min-width: 0;
+        h2 { font-size: 15px; font-weight: 600; margin: 0 0 12px; }
+    }
+    .o_elaf_appr_table_wrap { overflow-x: auto; }
+    .o_elaf_appr_table {
+        width: 100%; border-collapse: collapse;
+        th { color: $elaf-muted; font-weight: 600; font-size: 12px; text-align: start; border-bottom: 1px solid $elaf-line; padding: 6px 8px; }
+        td { border-bottom: 1px solid lighten($elaf-line, 4%); padding: 8px; text-align: start; }
+        td.num, th.num { text-align: end; font-variant-numeric: tabular-nums; }
+        tr.o_elaf_appr_clickable { cursor: pointer; &:hover td { background: $elaf-canvas; } }
+    }
+    .o_elaf_appr_pill {
+        display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 600;
+        background: lighten($elaf-info, 45%); color: $elaf-info;
+        &.ok { background: lighten($elaf-ok, 50%); color: $elaf-ok; }
+        &.warn { background: lighten($elaf-warn, 45%); color: darken($elaf-warn, 8%); }
+        &.bad { background: lighten($elaf-bad, 45%); color: $elaf-bad; }
+    }
+    .o_elaf_appr_estimate { font-style: italic; color: $elaf-muted; }   // label for estimates
+    .o_elaf_appr_forecast { stroke-dasharray: 5 4; }                     // forecast lines in SVG
+    .o_elaf_appr_reco {
+        border-inline-start: 3px solid $elaf-accent; background: $elaf-canvas;
+        padding: 10px 12px; border-radius: 6px; margin-bottom: 8px;
+    }
+    .o_elaf_appr_state {           // loading / empty / error
+        text-align: center; color: $elaf-muted; padding: 48px 16px;
+        .o_elaf_appr_state_title { font-size: 16px; color: $elaf-ink; font-weight: 600; margin-bottom: 6px; }
+        &.error .o_elaf_appr_state_title { color: $elaf-bad; }
+    }
+    svg.o_elaf_appr_chart { width: 100%; height: auto; display: block;
+        .bar { fill: $elaf-accent; } .bar.neg { fill: $elaf-bad; }
+        .axis { stroke: $elaf-line; } text { fill: $elaf-muted; font-size: 11px; }
+        .line { fill: none; stroke: $elaf-accent; stroke-width: 2; }
+        .threshold { stroke: $elaf-bad; stroke-dasharray: 4 3; }
+    }
+}
+@media (max-width: 768px) {
+    .o_elaf_appr_dashboard { padding: 12px;
+        .o_elaf_appr_grid { grid-template-columns: 1fr; } }
+}
+
+// ---- Approval Matrix additions (same prefix) ----
+.o_elaf_appr_dashboard {
+    .o_elaf_appr_badge {
+        display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 600;
+        background: $elaf-accent; color: #fff; margin-inline-start: 8px; vertical-align: middle;
+        &.lite { background: lighten($elaf-accent, 38%); color: $elaf-accent; }
+    }
+    .o_elaf_appr_lock {
+        display: inline-block; border-radius: 999px; padding: 1px 8px; font-size: 11px; font-weight: 600;
+        background: lighten($elaf-accent, 40%); color: $elaf-accent; margin-inline-start: 6px;
+    }
+    .o_elaf_appr_progress {
+        height: 8px; border-radius: 999px; background: $elaf-line; overflow: hidden; margin-block: 8px 4px;
+        > div { height: 100%; background: $elaf-accent; border-radius: 999px; }
+        &.warn > div { background: $elaf-warn; }
+        &.bad > div { background: $elaf-bad; }
+    }
+    .o_elaf_appr_banner {
+        border-radius: 8px; padding: 10px 14px; margin-block-end: 16px;
+        border-inline-start: 4px solid $elaf-info; background: lighten($elaf-info, 47%);
+        display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between;
+        &.warn { border-inline-start-color: $elaf-warn; background: lighten($elaf-warn, 47%); }
+        &.bad { border-inline-start-color: $elaf-bad; background: lighten($elaf-bad, 48%); }
+    }
+    .o_elaf_appr_kpi:focus-visible { outline: 2px solid $elaf-accent; outline-offset: 2px; }
+    .o_elaf_appr_locked_list { list-style: none; padding: 0; margin: 0;
+        li { padding: 6px 0; border-bottom: 1px solid $elaf-line; color: $elaf-muted; } }
+    .o_elaf_appr_check { color: $elaf-ok; font-weight: 700; }
+    .o_elaf_appr_dash { color: $elaf-muted; }
+    .o_elaf_appr_value_grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        .o_elaf_appr_value { background: $elaf-canvas; border-radius: 8px; padding: 12px;
+            strong { display: block; font-size: 20px; color: $elaf-ink; }
+            span { color: $elaf-muted; font-size: 12px; } } }
+    .o_elaf_appr_flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; }
+    .o_elaf_appr_bars { .o_elaf_appr_bar_row { display: grid; grid-template-columns: minmax(90px, 30%) 1fr auto; gap: 8px; align-items: center; margin-bottom: 6px; }
+        .o_elaf_appr_bar_track { background: $elaf-canvas; height: 10px; border-radius: 999px; overflow: hidden;
+            > div { background: $elaf-accent; height: 100%; } } }
+}
+
+// ELAF scroll fix: Odoo sets overflow:hidden on .o_action (3-class rule); let our client actions scroll.
+.o_web_client .o_action_manager > .o_action.o_elaf_appr_dashboard {
+    display: block;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: auto;              // Odoo hides the scrollbar on desktop; show it so users see they can scroll
+    &::-webkit-scrollbar { display: block; width: 10px; }
+    &::-webkit-scrollbar-thumb { background: #c5ccd6; border-radius: 6px; }
+}
