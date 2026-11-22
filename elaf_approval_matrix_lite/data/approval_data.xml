@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_elaf_approval_request" model="ir.sequence">
+            <field name="name">Approval Request</field>
+            <field name="code">elaf.approval.request</field>
+            <field name="prefix">APR/%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <record id="mail_activity_type_approval" model="mail.activity.type">
+            <field name="name">Approval Required</field>
+            <field name="summary">Approval required</field>
+            <field name="icon">fa-check-square-o</field>
+            <field name="delay_count">1</field>
+            <field name="res_model">elaf.approval.request</field>
+        </record>
+    </data>
+    <!-- Runtime usage row, created once; _get_or_create never resets an existing counter. -->
+    <function model="elaf.approval.usage" name="_get_or_create" eval="['approval_requests']"/>
+</odoo>

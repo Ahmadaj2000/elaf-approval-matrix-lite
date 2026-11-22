@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="elaf_approval_log_view_list" model="ir.ui.view">
+        <field name="name">elaf.approval.log.list</field>
+        <field name="model">elaf.approval.log</field>
+        <field name="arch" type="xml">
+            <tree string="Approval Audit Log" create="false" edit="false" delete="false">
+                <field name="date"/>
+                <field name="request_id"/>
+                <field name="document_name"/>
+                <field name="action"/>
+                <field name="level_name"/>
+                <field name="actor_display"/>
+                <field name="comment"/>
+                <field name="amount"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="company_id" groups="base.group_multi_company" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="elaf_approval_log_view_form" model="ir.ui.view">
+        <field name="name">elaf.approval.log.form</field>
+        <field name="model">elaf.approval.log</field>
+        <field name="arch" type="xml">
+            <form string="Audit Log Entry" create="false" edit="false" delete="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="request_id"/>
+                            <field name="document_name"/>
+                            <field name="action"/>
+                            <field name="level_name"/>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="on_behalf_of_id" invisible="not on_behalf_of_id"/>
+                            <field name="amount"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="fingerprint"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="comment"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="elaf_approval_log_view_search" model="ir.ui.view">
+        <field name="name">elaf.approval.log.search</field>
+        <field name="model">elaf.approval.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="request_id"/>
+                <field name="user_id"/>
+                <field name="action"/>
+                <filter name="decisions" string="Decisions" domain="[('action', 'in', ('approve', 'reject'))]"/>
+                <filter name="invalidations" string="Invalidations" domain="[('action', '=', 'invalidated')]"/>
+                <group>
+                    <filter name="group_action" string="Action" context="{'group_by': 'action'}"/>
+                    <filter name="group_user" string="User" context="{'group_by': 'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="elaf_approval_log_action" model="ir.actions.act_window">
+        <field name="name">Audit Log</field>
+        <field name="res_model">elaf.approval.log</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No audit entries yet</p>
+            <p>Every submission, approval, rejection and invalidation is recorded here and cannot be changed.</p>
+        </field>
+    </record>
+</odoo>

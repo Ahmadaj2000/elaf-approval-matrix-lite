@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="elaf_approval_matrix_lite.Dashboard">
+        <div class="o_elaf_appr_dashboard o_action">
+            <div class="o_elaf_appr_header">
+                <div>
+                    <h1>
+                        Approvals Overview
+                        <t t-if="state.data">
+                            <span t-if="usage.is_pro" class="o_elaf_appr_badge">Pro Edition</span>
+                            <span t-else="" class="o_elaf_appr_badge lite">Lite Edition</span>
+                        </t>
+                    </h1>
+                    <p class="o_elaf_appr_subtitle">Control every critical business decision.</p>
+                </div>
+                <div class="o_elaf_appr_filters">
+                    <label class="visually-hidden" for="o_elaf_appr_period">Period</label>
+                    <select id="o_elaf_appr_period" class="form-select form-select-sm w-auto" t-on-change="onPeriodChange">
+                        <option value="7" t-att-selected="state.period === 7">Last 7 days</option>
+                        <option value="30" t-att-selected="state.period === 30">Last 30 days</option>
+                        <option value="90" t-att-selected="state.period === 90">Last 90 days</option>
+                        <option value="365" t-att-selected="state.period === 365">Last 12 months</option>
+                    </select>
+                    <button class="btn btn-sm btn-secondary" t-on-click="() => this.load()" title="Refresh">
+                        <i class="fa fa-refresh"/> Refresh
+                    </button>
+                </div>
+            </div>
+
+            <div t-if="state.loading and !state.data" class="o_elaf_appr_state">
+                <i class="fa fa-circle-o-notch fa-spin fa-2x mb-2"/>
+                <div class="o_elaf_appr_state_title">Loading approvals…</div>
+            </div>
+
+            <div t-elif="state.error" class="o_elaf_appr_state error">
+                <div class="o_elaf_appr_state_title">The dashboard could not be loaded</div>
+                <p t-esc="state.error"/>
+                <button class="btn btn-secondary btn-sm" t-on-click="() => this.load()">Try again</button>
+            </div>
+
+            <t t-elif="state.data">
+                <t t-set="d" t-value="state.data"/>
+
+                <div t-if="usage.exhausted" class="o_elaf_appr_banner bad" role="alert">
+                    <span>
+                        Lite approval allowance used (<t t-esc="usage.used"/>/<t t-esc="usage.limit"/>).
+                        Existing approvals continue to work and enforcement stays on; new approval requests cannot be submitted.
+                    </span>
+                    <button class="btn btn-sm btn-primary" t-on-click="openComparison">See options</button>
+                </div>
+                <div t-elif="usage.caps_enabled and usage.pct >= 80" class="o_elaf_appr_banner warn" role="status">
+                    <span><t t-esc="usage.used"/> of <t t-esc="usage.limit"/> Lite approval requests used.</span>
+                    <button class="btn btn-sm btn-secondary" t-on-click="openComparison">Compare editions</button>
+                </div>
+
+                <div t-if="!d.rule_count" class="o_elaf_appr_banner" role="status">
+                    <span>No approval rules yet. Create a rule to start controlling Purchase Orders.</span>
+                    <button t-if="d.is_manager" class="btn btn-sm btn-primary" t-on-click="openRules">Create a rule</button>
+                    <span t-else="" class="text-muted">Ask an approval manager to create one.</span>
+                </div>
+
+                <div class="o_elaf_appr_kpis">
+                    <t t-foreach="d.kpis" t-as="kpi" t-key="kpi.key">
+                        <div t-attf-class="o_elaf_appr_kpi {{ kpi.tone ? 'is-' + kpi.tone : '' }}" role="button" tabindex="0"
+                             t-att-title="kpi.hint" t-on-click="() => this.openKpi(kpi)" t-on-keydown="(ev) => this.onKpiKey(ev, kpi)">
+                            <div class="o_elaf_appr_kpi_label" t-esc="kpi.label"/>
+                            <div class="o_elaf_appr_kpi_value" t-esc="kpi.display"/>
+                            <div class="o_elaf_appr_kpi_hint" t-esc="kpi.hint"/>
+                        </div>
+                    </t>
+                </div>
+
+                <div class="o_elaf_appr_grid">
+                    <div class="o_elaf_appr_card">
+                        <h2>Waiting for my approval</h2>
+                        <div t-if="!d.my_queue.length" class="o_elaf_appr_state py-4">
+                            <div class="o_elaf_appr_state_title">Nothing to approve</div>
+                            <div>Requests appear here when you are an approver of their current level.</div>
+                        </div>
+                        <div t-else="" class="o_elaf_appr_table_wrap">
+                            <table class="o_elaf_appr_table">
+                                <thead><tr><th>Request</th><th>Document</th><th>Requester</th><th>Level</th><th class="num">Amount</th></tr></thead>
+                                <tbody>
+                                    <tr t-foreach="d.my_queue" t-as="row" t-key="row.id" class="o_elaf_appr_clickable"
+                                        t-on-click="() => this.openRequest(row.id)">
+                                        <td t-esc="row.name"/>
+                                        <td t-esc="row.document"/>
+                                        <td t-esc="row.requester"/>
+                                        <td t-esc="row.level"/>
+                                        <td class="num" t-esc="row.amount"/>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-2" t-if="d.my_pending_count">
+                            <a href="#" t-on-click.prevent="openMyPending">
+                                My own requests still pending: <t t-esc="d.my_pending_count"/>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="o_elaf_appr_card">
+                        <h2>Recent activity</h2>
+                        <div t-if="!d.recent.length" class="o_elaf_appr_state py-4">
+                            <div class="o_elaf_appr_state_title">No activity yet</div>
+                            <div>Submit an approval request from a Purchase Order to get started.</div>
+                            <button class="btn btn-sm btn-secondary mt-2" t-on-click="openPurchase">Open Purchase Orders</button>
+                        </div>
+                        <div t-else="" class="o_elaf_appr_table_wrap">
+                            <table class="o_elaf_appr_table">
+                                <thead><tr><th>When</th><th>Request</th><th>Action</th><th>By</th></tr></thead>
+                                <tbody>
+                                    <tr t-foreach="d.recent" t-as="log" t-key="log.id" class="o_elaf_appr_clickable"
+                                        t-on-click="() => this.openRequest(log.request_id)" t-att-title="log.comment">
+                                        <td t-esc="log.date"/>
+                                        <td><t t-esc="log.request"/><div class="text-muted small" t-esc="log.document"/></td>
+                                        <td>
+                                            <span t-attf-class="o_elaf_appr_pill {{ ['approve','approved'].includes(log.action) ? 'ok' : (['reject'].includes(log.action) ? 'bad' : (log.action === 'invalidated' ? 'warn' : '')) }}"
+                                                  t-esc="log.action_label"/>
+                                        </td>
+                                        <td t-esc="log.actor"/>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="o_elaf_appr_card" t-if="usage.caps_enabled">
+                        <h2>Lite usage</h2>
+                        <div><strong t-esc="usage.used"/> of <t t-esc="usage.limit"/> approval requests used</div>
+                        <div t-attf-class="o_elaf_appr_progress {{ usage.tone }}" role="progressbar"
+                             t-att-aria-valuenow="usage.pct" aria-valuemin="0" aria-valuemax="100">
+                            <div t-att-style="usageBarStyle"/>
+                        </div>
+                        <div class="text-muted small"><t t-esc="usage.remaining"/> remaining<t t-if="usage.bound_company"> · company: <t t-esc="usage.bound_company"/></t></div>
+                        <div class="mt-3">
+                            <button class="btn btn-sm btn-secondary" t-on-click="openComparison">Lite vs Pro</button>
+                        </div>
+                    </div>
+
+                    <div class="o_elaf_appr_card" t-if="d.locked_features.length">
+                        <h2>Pro capabilities</h2>
+                        <ul class="o_elaf_appr_locked_list">
+                            <li t-foreach="d.locked_features" t-as="feat" t-key="feat_index">
+                                <i class="fa fa-lock me-1" aria-hidden="true"/><t t-esc="feat"/><span class="o_elaf_appr_lock">Pro</span>
+                            </li>
+                        </ul>
+                        <button class="btn btn-sm btn-link px-0 mt-2" t-on-click="openComparison">Compare editions</button>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>

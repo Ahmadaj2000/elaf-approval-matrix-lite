@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="elaf_approval_usage_log_view_list" model="ir.ui.view">
+        <field name="name">elaf.approval.usage.log.list</field>
+        <field name="model">elaf.approval.usage.log</field>
+        <field name="arch" type="xml">
+            <tree string="Usage Log" create="false" edit="false" delete="false">
+                <field name="at"/>
+                <field name="key"/>
+                <field name="event"/>
+                <field name="user_id"/>
+                <field name="record_ref"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="elaf_approval_usage_log_action" model="ir.actions.act_window">
+        <field name="name">Usage Log</field>
+        <field name="res_model">elaf.approval.usage.log</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="elaf_approval_dashboard_action" model="ir.actions.client">
+        <field name="name">Approvals Overview</field>
+        <field name="tag">elaf_approval_matrix_lite.dashboard</field>
+    </record>
+
+    <record id="elaf_approval_comparison_action" model="ir.actions.client">
+        <field name="name">Lite vs Pro</field>
+        <field name="tag">elaf_approval_matrix_lite.comparison</field>
+    </record>
+</odoo>

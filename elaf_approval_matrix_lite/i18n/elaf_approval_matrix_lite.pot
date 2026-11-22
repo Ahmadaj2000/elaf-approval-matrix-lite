@@ -1,0 +1,2656 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* elaf_approval_matrix_lite
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20260908\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-22 09:20+0000\n"
+"PO-Revision-Date: 2026-11-22 09:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"%(doc)s cannot be confirmed: approval %(req)s is still pending (level: "
+"%(level)s; waiting for: %(users)s)."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"%(doc)s cannot be confirmed: approval %(req)s was invalidated (%(reason)s). "
+"Request a new approval."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"%(doc)s cannot be confirmed: approval %(req)s was rejected (%(reason)s). "
+"Update the document and request approval again."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"%(doc)s cannot be confirmed: it changed after approval %(req)s. Request a "
+"new approval."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"%(doc)s is confirmed and its approval does not cover this change "
+"(%(reason)s). %(hint)s"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"%(doc)s requires approval under rule '%(rule)s' before it can be confirmed. "
+"Use 'Request Approval' first."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid ""
+"%(feature)s is available in the Pro edition of Approval Matrix. Open "
+"Approvals > Lite vs Pro to compare editions."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"%(used)s of %(limit)s Lite approval requests used. See Approvals > Lite vs "
+"Pro for unlimited approvals."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_log.py:0
+#, python-format
+msgid "%(user)s on behalf of %(other)s"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "%s h"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "%s in total"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "%s%% of decisions"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid ""
+").\n"
+"                        Existing approvals continue to work and enforcement stays on; new approval requests cannot be submitted."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid ""
+".\n"
+"                    A new approval is required before confirmation."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid ""
+".\n"
+"                    The order can be confirmed once it is approved."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid ""
+"<i class=\"fa fa-check me-1\" title=\"Approved\"/>\n"
+"                    <strong>Approved.</strong> The order can be confirmed."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid "<i class=\"fa fa-exclamation-triangle me-1\" title=\"Warning\"/>"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid ""
+"<i class=\"fa fa-hourglass-half me-1\" title=\"Pending\"/>\n"
+"                    <strong>Approval pending</strong> at level"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid ""
+"<i class=\"fa fa-shield me-1\" title=\"Approval\"/>\n"
+"                    This order requires approval under rule"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+msgid "<span class=\"o_stat_text\">Document</span>"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+msgid "<strong>Invalidated:</strong>"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+msgid "<strong>Rejected:</strong>"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "A reason is required to reject an approval request."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.actions.act_window,help:elaf_approval_matrix_lite.elaf_approval_rule_action
+msgid ""
+"A rule defines an amount band and the approval levels a Purchase Order needs"
+" before it can be confirmed."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__acted_user_ids
+msgid "Acted By"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__action
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_log_view_search
+#, python-format
+msgid "Action"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_needaction
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__active
+msgid "Active"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Active approval rules"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__actor_display
+msgid "Actor"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__amount_tolerance_pct
+msgid ""
+"After approval, quantity or price edits that keep the total within this "
+"percentage of the approved total keep the approval valid. 0 = any line "
+"change requires a new approval. Vendor, currency or product changes always "
+"invalidate."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__all_approver_ids
+msgid "All Approvers"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_requests
+msgid "All Requests"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "All levels approved."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid ""
+"All limits are removed. Your Lite rules, requests and audit history were "
+"kept."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__amount
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__amount
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__amount
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+#, python-format
+msgid "Amount"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__amount_company
+msgid "Amount (Company Currency)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+msgid "Amount Band (company currency)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__amount_tolerance_pct
+msgid "Amount Tolerance (%)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__baseline_amount_company
+msgid ""
+"Amount when approval was requested. The rule tolerance is measured against "
+"it."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_list_elaf_approval
+msgid "Approval"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Approval %(req)s completed: the document is approved."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Approval %(req)s invalidated: %(reason)s. A new approval is required."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Approval %(req)s is already %(state)s."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Approval %(req)s rejected by %(user)s: %(reason)s"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Approval %(req)s requested under rule '%(rule)s'."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Approval %s cancelled."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_log
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_log_view_list
+msgid "Approval Audit Log"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_decision_wizard_form
+msgid "Approval Decision"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_approval_waiting_for
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_approval_waiting_for
+msgid "Approval Level"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#: model:ir.module.category,name:elaf_approval_matrix_lite.module_category_elaf_approval
+#, python-format
+msgid "Approval Matrix"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_mixin
+msgid "Approval Matrix document mixin"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_edition
+msgid "Approval Matrix edition helpers"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Approval Matrix editions"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_usage
+msgid "Approval Matrix usage counter"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_usage_log
+msgid "Approval Matrix usage log"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_search_elaf_approval
+msgid "Approval Pending"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__approval_progress
+msgid "Approval Progress"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_search_elaf_approval
+msgid "Approval Rejected or Invalidated"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_request
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_approval_request_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_approval_request_id
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+msgid "Approval Request"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_request_level
+msgid "Approval Request Level"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#: model:ir.actions.act_window,name:elaf_approval_matrix_lite.elaf_approval_request_action_all
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_list
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_pivot
+#, python-format
+msgid "Approval Requests"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_approval_required
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_approval_required
+#: model:mail.activity.type,name:elaf_approval_matrix_lite.mail_activity_type_approval
+msgid "Approval Required"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_rule
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_approval_rule_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_approval_rule_id
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+msgid "Approval Rule"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_rule_level
+msgid "Approval Rule Level"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.actions.act_window,name:elaf_approval_matrix_lite.elaf_approval_rule_action
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_rules
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_rules_purchase
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_list
+msgid "Approval Rules"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_approval_state
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_approval_state
+msgid "Approval Status"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_approval_valid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_approval_valid
+msgid "Approval Valid"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid "Approval allowance used"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Approval can only be requested while the document is a draft."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Approval requested"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Approval requested (%(used)s of %(limit)s Lite requests used)."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Approval requested."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Approval requests"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid ""
+"Approval requests are created with the 'Request Approval' button on the "
+"document."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid ""
+"Approval requests are part of the audit trail and cannot be deleted. Cancel "
+"them instead."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid ""
+"Approval requests can only change through Approve, Reject, Cancel or a "
+"document change. Direct edits are not allowed."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:mail.activity.type,summary:elaf_approval_matrix_lite.mail_activity_type_approval
+msgid "Approval required"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#, python-format
+msgid "Approval rules for other document types"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_approval_count
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_approval_count
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_root
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid "Approvals"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model:ir.actions.client,name:elaf_approval_matrix_lite.elaf_approval_dashboard_action
+#, python-format
+msgid "Approvals Overview"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Approvals for %s"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Approvals voided by a material change"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_decision_wizard__decision__approve
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_decision_wizard_form
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+#, python-format
+msgid "Approve"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Approve %(doc)s (%(req)s)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_elaf_approval_decision_wizard
+msgid "Approve or reject an approval request"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request__state__approved
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request_level__state__approved
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+msgid "Approved"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Approved (%s days)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_search_elaf_approval
+msgid "Approved (Approval Matrix)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__approved_user_ids
+msgid "Approved By"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_log__action__approve
+msgid "Approved Level"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__group_id
+msgid "Approver Group"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__approver_type
+msgid "Approver Type"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__user_ids
+msgid "Approvers"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_search
+msgid "Archived"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Ask an approval manager to create one."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__at
+msgid "At"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_attachment_count
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.actions.act_window,name:elaf_approval_matrix_lite.elaf_approval_log_action
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__log_ids
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_log
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+msgid "Audit Log"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_log_view_form
+msgid "Audit Log Entry"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_log.py:0
+#, python-format
+msgid "Audit log entries are written by the application only."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Avg. Approval Time"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Back to overview"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__bound_company_id
+msgid "Bound Company"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "By"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__can_act
+msgid "Can Act"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:res.groups,comment:elaf_approval_matrix_lite.group_approval_user
+msgid "Can request approvals and see own requests and requests to approve."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_decision_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+msgid "Cancel Request"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Cancel the document, reset it to draft and request a new approval."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/purchase_order.py:0
+#, python-format
+msgid ""
+"Cancel the purchase order, set it back to RFQ and request a new approval."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+msgid "Cancel this approval request?"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_log__action__cancel
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request__state__cancelled
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request_level__state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Capability"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_log__action__adjusted
+msgid "Change Within Tolerance"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Changes after approval caught"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__comment
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__comment
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_decision_wizard_form
+msgid "Comment"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Companies"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__company_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__company_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__company_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__company_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__company_id
+msgid "Company"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__company_currency_id
+msgid "Company Currency"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Compare editions"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Conditions (partner, category, analytic, team, domain)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_config
+msgid "Configuration"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:res.groups,comment:elaf_approval_matrix_lite.group_approval_manager
+msgid ""
+"Configures approval rules and sees every request of the allowed companies."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_usage_log__event__consumed
+msgid "Consumed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Control every critical business decision."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Create a rule"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.actions.act_window,help:elaf_approval_matrix_lite.elaf_approval_rule_action
+msgid "Create your first approval rule"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__create_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__create_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__create_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__create_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__create_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__create_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__create_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__create_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__create_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__create_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__create_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__create_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__create_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__create_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__currency_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__currency_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__currency_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__level_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__current_level_name
+msgid "Current Level"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__cycle_hours
+msgid "Cycle Time (h)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__date
+msgid "Date"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__date_activated
+msgid "Date Activated"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__date_decided
+msgid "Date Decided"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__date_done
+msgid "Date Done"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__date_requested
+msgid "Date Requested"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__decision
+msgid "Decision"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_log_view_search
+msgid "Decisions"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Delegation of authority"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_usage_log__event__denied
+msgid "Denied"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__note
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+msgid "Description"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Discover Pro"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__display_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__display_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__display_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__display_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__display_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__display_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__display_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__document_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__document_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__document_name
+#, python-format
+msgid "Document"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__res_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__res_id
+msgid "Document ID"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__res_model
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__res_model
+msgid "Document Model"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__document_type
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__res_model
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+msgid "Document Type"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Document cancelled"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__amount
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__amount
+msgid "Document total when approval was requested."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__min_amount
+msgid "Documents whose total (in company currency) is at least this amount."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Edit within the %s%% tolerance; approval kept."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_approval_reason
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_approval_reason
+msgid "Elaf Approval Reason"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_can_approve
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_can_approve
+msgid "Elaf Can Approve"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_can_request_approval
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_can_request_approval
+msgid "Elaf Can Request Approval"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_mixin__elaf_lite_exhausted
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_purchase_order__elaf_lite_exhausted
+msgid "Elaf Lite Exhausted"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__approver_ids
+msgid "Eligible Approvers"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__event
+msgid "Event"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.actions.act_window,help:elaf_approval_matrix_lite.elaf_approval_log_action
+msgid ""
+"Every submission, approval, rejection and invalidation is recorded here and "
+"cannot be changed."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid ""
+"Extend this control to Sales Orders, Vendor Bills and Customer Invoices, "
+"with a visual workflow builder, delegation of authority and segregation-of-"
+"duties rules, with the Pro edition."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Feature comparison"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__fingerprint
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__fingerprint
+msgid "Fingerprint"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__first_prompt_done
+msgid "First Prompt Done"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_follower_ids
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_partner_ids
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Governance Control Tower"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__has_message
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__fingerprint
+msgid "Hash of the approved document content (partner, currency, lines)."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "How upgrading works"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__id
+msgid "ID"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__message_needaction
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__message_has_error
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__message_has_sms_error
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__message_has_error
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Immutable audit log"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request_level__state__active
+msgid "In Progress"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Included"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid ""
+"Install the Pro module (Approval Matrix) on this database. All your rules, "
+"requests, audit history, settings and permissions are kept, and every Lite "
+"limit is removed."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+msgid "Integrity"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+msgid "Internal notes about this rule"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_log__action__invalidated
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request__state__invalidated
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+msgid "Invalidated"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Invalidated (%s days)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__invalidation_reason
+msgid "Invalidation Reason"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_log_view_search
+msgid "Invalidations"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_is_follower
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__is_requester
+msgid "Is Requester"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__key
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__key
+msgid "Key"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Last 12 months"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Last 30 days"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Last 7 days"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Last 90 days"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__write_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__write_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__write_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__write_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__write_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__write_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__write_uid
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__write_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__write_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__write_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__write_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__write_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__write_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__write_date
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__last_used_at
+msgid "Last Used At"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__level_name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__level_id
+#, python-format
+msgid "Level"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Level %(level)s approved by %(user)s."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"Level '%(level)s' of rule '%(rule)s' has no eligible approver for this "
+"document (the requester cannot approve their own request; approvers must "
+"have access to company %(company)s). Ask an approval manager to update the "
+"rule."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#, python-format
+msgid "Level '%s' needs an approver group."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#, python-format
+msgid "Level '%s' needs at least one approver."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__level_count
+msgid "Level Count"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__level_sequence
+msgid "Level Sequence"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Level: %(level)s. Amount: %(amount)s %(cur)s."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__level_ids
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__level_ids
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_list
+msgid "Levels"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+msgid ""
+"Levels are approved one after another, lowest sequence first. One approval\n"
+"                                from the listed users (or group members) completes a level. The requester\n"
+"                                can never approve their own request."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Levels per rule"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__limit
+msgid "Limit"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Lite"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Lite Edition"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Lite approval allowance used ("
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid ""
+"Lite approval allowance used (%(used)s/%(limit)s). Existing approvals "
+"continue to work; upgrade to Pro for unlimited approvals."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Lite approval requests used."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Lite edition limits"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Lite usage"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model:ir.actions.client,name:elaf_approval_matrix_lite.elaf_approval_comparison_action
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_comparison
+#, python-format
+msgid "Lite vs Pro"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Loading approvals…"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Loading…"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__log_ids
+msgid "Log"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:res.groups,name:elaf_approval_matrix_lite.group_approval_manager
+msgid "Manager"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__max_amount
+msgid "Maximum Amount"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_has_error
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_ids
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__min_amount
+msgid "Minimum Amount"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Multi-company"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.actions.act_window,name:elaf_approval_matrix_lite.elaf_approval_request_action_mine
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_mine
+msgid "My Approvals"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.js:0
+#, python-format
+msgid "My Pending Requests"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+msgid "My Requests"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "My own requests still pending:"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__name
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__name
+msgid "Name"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "No activity yet"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.actions.act_window,help:elaf_approval_matrix_lite.elaf_approval_request_action_all
+msgid "No approval requests yet"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "No approval rule applies to %s; it can be confirmed directly."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid ""
+"No approval rules yet. Create a rule to start controlling Purchase Orders."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "No approved requests in period"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.actions.act_window,help:elaf_approval_matrix_lite.elaf_approval_log_action
+msgid "No audit entries yet"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "No decisions in period"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Not included"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.actions.act_window,help:elaf_approval_matrix_lite.elaf_approval_request_action_mine
+msgid "Nothing is waiting for your approval"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Nothing to approve"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_needaction_counter
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_has_error_counter
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__message_needaction_counter
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__message_has_error_counter
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__on_behalf_of_id
+msgid "On Behalf Of"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "One"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "One active approval rule."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "One company."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.constraint,message:elaf_approval_matrix_lite.constraint_elaf_approval_usage_key_uniq
+msgid "One usage row per key."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Only pending or approved requests can be cancelled."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Only pending requests can be approved (current state: %s)."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Only pending requests can be rejected."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Only the requester or an approval manager can cancel a request."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Open Purchase Orders"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.actions.act_window,help:elaf_approval_matrix_lite.elaf_approval_request_action_all
+msgid "Open a Purchase Order covered by a rule and click \"Request Approval\"."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_decision_wizard_form
+msgid "Optional comment for the audit log"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__comment
+msgid "Optional for an approval, required for a rejection."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_dashboard
+msgid "Overview"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Parallel and any-N levels"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request__state__pending
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+#, python-format
+msgid "Pending"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Period"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Policy simulation"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Pro"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Pro Edition"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Pro Edition installed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Pro capabilities"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Pro edition installed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_purchase_order
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_rule__res_model__purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model,name:elaf_approval_matrix_lite.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Purchase Order approvals"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Purchase Orders controlled"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Purchase Orders only."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Questions:"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_decision_wizard_form
+msgid "Reason"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Recent activity"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__record_ref
+msgid "Record"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Refresh"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_decision_wizard__decision__reject
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_decision_wizard_form
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+#, python-format
+msgid "Reject"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__reject_reason
+msgid "Reject Reason"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_log__action__reject
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request__state__rejected
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request_level__state__rejected
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+msgid "Rejected"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Rejected (%s days)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Rejections that stopped spend ("
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_decision_wizard__request_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__request_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__request_id
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_form
+#, python-format
+msgid "Request"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid "Request Approval"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_log__action__approved
+msgid "Request Approved"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__request_count
+msgid "Request Count"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "Request levels are managed by the application."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Request to final approval, %s approved"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+msgid "Requested On"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__requester_id
+msgid "Requested by"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+#, python-format
+msgid "Requester"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+msgid "Requests"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: model_terms:ir.actions.act_window,help:elaf_approval_matrix_lite.elaf_approval_request_action_mine
+#, python-format
+msgid "Requests appear here when you are an approver of their current level."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Requests you can approve now"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__required_approvals
+msgid "Required Approvals"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__rule_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__rule_id
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+msgid "Rule"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "Rule '%s' has no levels. Ask an approval manager to add one."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#, python-format
+msgid "Rule amounts cannot be negative."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "SLA escalation"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__message_has_sms_error
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Sales Orders, Vendor Bills and Customer Invoices"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+msgid "Scope"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_rule_level__approver_type__group
+msgid "Security Group"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "See options"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Segregation of duties rules"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__sequence
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__sequence
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule_level__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Server-side enforcement and change invalidation"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__snapshot_json
+msgid "Snapshot Json"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_rule_level__approver_type__users
+msgid "Specific Users"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Split-transaction detection"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__state
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request_level__state
+msgid "State"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+msgid "Status"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Submit an approval request from a Purchase Order to get started."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_log__action__submit
+msgid "Submitted"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__baseline_amount_company
+msgid "Submitted Amount (Company Currency)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Support:"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid ""
+"The Lite allowance of approval requests is used. Open the edition "
+"comparison."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#, python-format
+msgid ""
+"The Lite edition supports one active approval rule. Archive the current rule"
+" first, or use the Pro edition for an unlimited approval matrix."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#, python-format
+msgid ""
+"The Lite edition supports up to %(max)s levels per rule. The Pro edition "
+"supports unlimited levels."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid ""
+"The Lite edition works with one company: %(company)s. The Pro edition "
+"supports multi-company approval matrices."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_log.py:0
+#, python-format
+msgid "The approval audit log is immutable and cannot be deleted."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_log.py:0
+#, python-format
+msgid "The approval audit log is immutable."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "The dashboard could not be loaded"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#, python-format
+msgid "The maximum amount must be greater than the minimum amount."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_rule.py:0
+#, python-format
+msgid "The tolerance must be between 0 and 100%."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid "The usage log cannot be deleted."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid "The usage log cannot be modified."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid "The usage log is append-only and maintained by the application."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "There is no approval request on this document."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "This page could not be loaded"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_list
+msgid "Total"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Total %s"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Total amount approved"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Try again"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Unlimited"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid ""
+"Up to %s approval requests in total (resubmitting after invalidation counts "
+"as a new request)."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Up to %s levels per rule, one approver needed per level (sequential)."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__max_amount
+msgid "Upper bound of the band (inclusive). 0 means no maximum."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__usage_id
+msgid "Usage"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.actions.act_window,name:elaf_approval_matrix_lite.elaf_approval_usage_log_action
+#: model:ir.ui.menu,name:elaf_approval_matrix_lite.menu_elaf_approval_usage_log
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_usage_log_view_list
+msgid "Usage Log"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid "Usage counters are maintained by the application only."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid "Usage counters cannot be deleted."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_usage.py:0
+#, python-format
+msgid "Usage counters cannot be modified."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__used
+msgid "Used"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_log__user_id
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage_log__user_id
+#: model:res.groups,name:elaf_approval_matrix_lite.group_approval_user
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_log_view_search
+msgid "User"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid "Value delivered so far (your real data)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "Visual drag-and-drop workflow builder"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields.selection,name:elaf_approval_matrix_lite.selection__elaf_approval_request_level__state__waiting
+msgid "Waiting"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__current_approver_ids
+msgid "Waiting For"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_request_view_search
+#, python-format
+msgid "Waiting for Me"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "Waiting for my approval"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_usage__warn_prompt_done
+msgid "Warn Prompt Done"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_request__website_message_ids
+#: model:ir.model.fields,field_description:elaf_approval_matrix_lite.field_elaf_approval_rule__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_request__website_message_ids
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#, python-format
+msgid ""
+"What each edition includes, and what Approval Matrix has done for you so "
+"far."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "When"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model:ir.model.fields,help:elaf_approval_matrix_lite.field_elaf_approval_rule__sequence
+msgid "When several rules match a document, the lowest sequence wins."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_decision_wizard_form
+msgid "Why is this request rejected? (required)"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "You are not an approver of the current level of %(req)s."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "You cannot approve your own approval request."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_request.py:0
+#, python-format
+msgid "You cannot reject your own approval request; cancel it instead."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "You need the Approvals / User access right to request approvals."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_dashboard.py:0
+#, python-format
+msgid "You need the Approvals / User access right."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid ""
+"Your first approval request is on its way. Approval Matrix Lite includes "
+"%(limit)s approval requests; %(left)s remain."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "amount increased from %(old)s to %(new)s"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "approval requests used"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "approved content changed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.purchase_order_form_elaf_approval
+msgid "before it can be confirmed."
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "company changed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "currency changed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "delivery address or payment terms changed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "document changed before resubmission"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#: model_terms:ir.ui.view,arch_db:elaf_approval_matrix_lite.elaf_approval_rule_view_form
+msgid "e.g. Purchases above 5,000"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/comparison/approval_comparison.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "of"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "order lines added, removed or products changed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "partner changed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "quantities or prices changed"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "remaining"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "rule '%s' requires an approval for this content"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-python
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#: code:addons/elaf_approval_matrix_lite/models/approval_mixin.py:0
+#, python-format
+msgid "the document now falls under rule '%s'"
+msgstr ""
+
+#. module: elaf_approval_matrix_lite
+#. odoo-javascript
+#: code:addons/elaf_approval_matrix_lite/static/src/dashboard/approval_dashboard.xml:0
+#, python-format
+msgid "· company:"
+msgstr ""
